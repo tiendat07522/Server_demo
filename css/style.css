@@ -1,0 +1,155 @@
+.left-block {
+    margin-top: 2px;
+    display: block;
+    float: left;
+    width: 30%;
+    background: #d8d8d899;
+    border: 2px solid #772f2f2b;
+}
+
+.left-block nav {
+    margin-top: 50px;
+}
+
+.left-block nav ul {
+    list-style-type: none;
+}
+
+.left-block nav ul li {
+    font-size: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.login-text {
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    background: #d8d8d899;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.right-block {
+    margin-top: 2px;
+    display: block;
+    float: left;
+    width: 70%;
+    padding-left: 100px;
+    height: 100vh;
+}
+
+/* Home Dash board */
+
+.big-box {
+    background: #191927;
+}
+
+.top-nav {
+    padding: 20px;
+}
+
+a.link-dashboard {
+    color: white;
+    font-size: 20px;
+}
+
+a.link-dashboard:hover {
+    text-decoration: none;
+    color: #dfe4e8;
+}
+
+.left-nav {
+    float: left;
+    width: 15%;
+    height: 100vh;
+    background: #d950d3;
+    border-radius: 8px;
+}
+
+.right-nav {
+    float: left;
+    width: 80%;
+    padding-left: 40px;
+}
+
+.logo-team {
+    border-bottom: 1px solid white;
+    width: 100%;
+    text-align: center;
+    padding: 20px 20px 10px 20px;
+}
+
+.logo-team a {
+    font-size: 20px;
+    color: white;
+}
+
+.logo-team a:hover {
+    text-decoration: none;
+    color: #dfe4e8;
+}
+
+.nav-pre li {
+    list-style-type: none;
+    margin-top: 10px;
+}
+
+.nav-pre li a {
+    color: white;
+    font-size: 20px;
+}
+
+.nav-pre li a:hover {
+    text-decoration: none;
+    color: #dfe4e8;
+}
+
+.one-song {
+    background: #27293d;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.box-mp3-view {
+    display: block;
+    width: 40%;
+    float: left;
+}
+
+.one-song p {
+    color: white;
+    font-size: 20px;
+}
+
+.box-mp4-view {
+    display: block;
+    width: 55%;
+    float: right;
+}
+
+.title-list p {
+    color: white;
+    font-size: 20px
+}
+
+.icon-song i {
+    color: white;
+    font-size: 20px
+}
+
+.text-song {
+    float: left;
+}
+
+.icon-song {
+    float: right;
+}
+
+.clear-both {
+    clear: both;
+}

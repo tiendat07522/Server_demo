@@ -1,0 +1,38 @@
+<?php require_once 'config.php';?>
+<?php
+	// gioi han file upload khong qua 100kb
+	$max_size = 1000000;	
+	// lay thong tin file upload
+	$name = $_FILES['file']['name'];
+	$size = $_FILES['file']['size'];
+	$type = $_FILES['file']['type'];
+	// echo 'name'.$name;
+	// echo 'size'.$size;
+	// echo 'type'.$type;
+	if(isset($name) && !empty($name)){
+
+	// lay duoi file
+	$extension = substr($name, strpos($name, '.') + 1);
+
+	// kiem tra xem co dung la file hinh anh hay khong
+	if(($extension == "jpg" || $extension == "jpeg") && $type == "image/jpeg" && $extension == $size<=$max_size){
+		$location = "uploads/";
+		if(move_uploaded_file($_FILES['file']['tmp_name'],$location.$name)){
+            $smsg = "Upload thành công !";
+			// dua thong tin file vao csdl
+			$query = "INSERT INTO `upload` (name, size, type, location) VALUES ('$name', '$size', '$type', '$location$name')";
+            $result = mysqli_query($con,$query);
+            echo $smsg;
+		}else{
+			$fmsg = "Upload Thất bại";
+	
+		}
+	}else{
+        $fmsg = "Chỉ hỗ trợ file JPEG và dung lượng không quá 100 KiloBytes";
+	}
+
+	}else{
+        $fmsg = "Chọn file upload";
+	}
+	
+?>
