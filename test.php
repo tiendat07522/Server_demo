@@ -40,7 +40,6 @@
         $fmsg = "Chỉ hỗ trợ file MP3 và dung lượng không quá 100MB";
          echo $fmsg;
 	}
-
 	}else{
         $fmsg = "Chọn file upload";
          echo $fmsg;

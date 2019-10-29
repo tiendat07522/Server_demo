@@ -35,8 +35,12 @@
     Upload Video
  <form action="upload_mp4_file.php" method="POST" enctype="multipart/form-data">
   <div class="form-group">
-    <label for="Name">Name: </label>
+    <label for="Name">Tên Hiển thị: </label>
     <input type="text" class="form-control" name="Name">
+  </div>
+   <div class="form-group">
+    <label for="Name">Tên Đường dẫn: </label>
+    <input type="text" class="form-control" name="Namepath">
   </div>
   <div class="form-group">
     <label for="Singer">Singer:</label>
@@ -45,6 +49,11 @@
    <div class="form-group">
     <label for="File">File:</label>
     <input type="file" class="form-control" name="File">
+  </div>
+  <div class="form-group">
+    <label for="File">Ảnh hiển thị:</label>
+    <input type="file" class="form-control" name="picture">
+  
   </div>
   <button type="submit" class="btn btn-default">Upload</button>
 </form>

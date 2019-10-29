@@ -5,13 +5,11 @@
 	// lay thong tin file upload
   $name = $_POST['Name'];
   $namefile=$_FILES['File']['name'];
+  $namepath=$_POST['Namepath'];/**video */
+  $picture_name=$_FILES['picture']['name'];
   $singer=$_POST['Singer'];
   $size = $_FILES['File']['size'];
   $type = $_FILES['File']['type'];
-  
-	// echo 'name'.$name;
-	// echo 'size'.$size;
-	// echo 'type'.$type;
 	if(isset($name) && !empty($name)){
 
 	// lay duoi file
@@ -20,11 +18,15 @@
 	// kiem tra xem co dung la file hinh anh hay khong
 	if(($extension == "mp4") && $type == "video/mp4" && $extension == $size<=$max_size){
 		$location = "uploads/mp4/";
-		if(move_uploaded_file($_FILES['File']['tmp_name'],$location.$name)){
-            $smsg = "Upload thành công !";
+		$location_picture="uploads/image/";
+		$value_picture="demophp/".$location_picture.$picture_name;
+		$value_mp4="demophp/".$location.$namepath.".mp4";
+		if(move_uploaded_file($_FILES['File']['tmp_name'],$location.$namepath.".mp4")){
 			// dua thong tin file vao csdl
-			$query = "INSERT INTO `mp4` (name, singer, category, views,path) VALUES ('$name', '$singer', NULL,NULL,'$location$name')";
-            $result = mysqli_query($con,$query);
+			$query = "INSERT INTO `mp4` (name, singer, category, views,path,picture) VALUES ('$name', '$singer',NULL,NULL,'$value_mp4','$value_picture')";
+			$result = mysqli_query($con,$query);
+			$smsg = "Upload thành công !";
+			move_uploaded_file($_FILES['picture']['tmp_name'],$location_picture.$picture_name);
             echo $smsg;
 		}else{
 			$fmsg = "Upload Thất bại";
