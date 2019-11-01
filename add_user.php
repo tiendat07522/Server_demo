@@ -8,9 +8,11 @@ $smsg = "Upload thành công !";
 	if(strlen($username)>0 && strlen($password)>0){
         $query = "INSERT INTO `users` (name, username, password) VALUES ('$name', '$username','$password')";
         $result = mysqli_query($con,$query);
-     print $data[]=array('status'=>200);
+     $data[]=array('status'=>200);
+     	print json_encode($data);
     }else{
-        print $data[]=array('status'=>404);
+        $data[]=array('status'=>404);
+        	print json_encode($data);
     }
 
 ?>
