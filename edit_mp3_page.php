@@ -6,6 +6,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="style.css" media="all" />
+     <link rel="stylesheet" type="text/css" href="./css/style.css" media="all" />
     <!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
 	<!-- Optional theme -->
@@ -14,23 +15,59 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-<div class="container">
-EDiT MP3
- <form action=".php" method="POST" enctype="multipart/form-data">
+<div class="container-fluid">
+   <div class="left-nav">
+            <div class="logo-team">
+                <a href="#">Team 4</a>
+            </div>
+            <ul class="nav-pre">
+                <li><a href="home.php"><i class="fas fa-align-justify"></i> DashBoard</a></li>
+                <li><a href="upload_mp3.php"><i class="fas fa-folder-plus"></i> Upload MP3</a></li>
+                <li><a href="upload_mp4.php"><i class="fas fa-bible"></i> Upload MP4</a></li>
+                <li><a href="#"><i class="fas fa-align-justify"></i>  ....</a></li>
+                <li><a href="#"><i class="fas fa-align-justify"></i>  ....</a></li>
+                <li><a href="#"><i class="fas fa-align-justify"></i>  ....</a></li>
+                <li><a href="#"><i class="fas fa-align-justify"></i>  ....</a></li>
+                <li><a href="#"><i class="fas fa-align-justify"></i>  ....</a></li>
+            </ul>
+        </div>
+
+        <!-- PHP get data -->
+        <?php
+        $id = $_GET['del'];
+         $query="SELECT * FROM mp3 where mp3_id=$id";
+         $result = mysqli_query($con,$query);
+        $row = mysqli_fetch_assoc($result) ;
+        ?>
+        <!-- end PHP -->
+<div class="right-nav">
+EDIT MP3
+ <form action="#" method="POST" enctype="multipart/form-data">
   <div class="form-group">
-    <label for="Name">Name: </label>
-    <input type="text" class="form-control" name="Name">
+    <label for="Name">Tên hiển thị: </label>
+    <input type="text" class="form-control" name="Name" value="<?php echo $row['name']?>">
+  </div>
+   <div class="form-group">
+    <label for="Name">Tên Trong Đường dẫn: </label>
+    <input type="text" class="form-control" name="Namepath" value="<?php echo $row['path']?>">
   </div>
   <div class="form-group">
     <label for="Singer">Singer:</label>
-    <input type="text" class="form-control" name="Singer">
+    <input type="text" class="form-control" name="Singer" value="<?php echo $row['singer']?>">
   </div>
    <div class="form-group">
     <label for="File">File:</label>
     <input type="file" class="form-control" name="File">
+  
+  </div>
+  <div class="form-group">
+    <label for="File">Ảnh hiển thị:</label>
+    <input type="file" class="form-control" name="picture">
+  
   </div>
   <button type="submit" class="btn btn-default">Upload</button>
 </form>
+</div>
 </div>
 </body>
 </html>

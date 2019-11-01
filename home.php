@@ -55,7 +55,7 @@
                     </div>
                     <div class="icon-song">
                         <a href="remove.php?del=<?php echo $row['mp3_id']?>"> <i class="fas fa-trash-alt"></i></a>
-                        <a href=""><i class="fas fa-edit"></i></a>
+                        <a href="edit_mp3_page.php?del=<?php echo $row['mp3_id']?>"><i class="fas fa-edit"></i></a>
                     </div>
                     <div class="clear-both"></div>
                 </div>

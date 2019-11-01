@@ -6,6 +6,7 @@
   $name = $_POST['Name'];
   $namefile=$_FILES['File']['name'];
   $namepath=$_POST['Namepath'];/**video */
+  $category=$_POST['Category'];
   $picture_name=$_FILES['picture']['name'];
   $singer=$_POST['Singer'];
   $size = $_FILES['File']['size'];
@@ -23,7 +24,7 @@
 		$value_mp4="demophp/".$location.$namepath.".mp4";
 		if(move_uploaded_file($_FILES['File']['tmp_name'],$location.$namepath.".mp4")){
 			// dua thong tin file vao csdl
-			$query = "INSERT INTO `mp4` (name, singer, category, views,path,picture) VALUES ('$name', '$singer',NULL,NULL,'$value_mp4','$value_picture')";
+			$query = "INSERT INTO `mp4` (name, singer, category, views,path,picture) VALUES ('$name', '$singer','$category',NULL,'$value_mp4','$value_picture')";
 			$result = mysqli_query($con,$query);
 			$smsg = "Upload thành công !";
 			move_uploaded_file($_FILES['picture']['tmp_name'],$location_picture.$picture_name);

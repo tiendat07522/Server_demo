@@ -46,6 +46,10 @@ Upload MP3
     <label for="Singer">Singer:</label>
     <input type="text" class="form-control" name="Singer">
   </div>
+  <div class="form-group">
+    <label for="Singer">Category:</label>
+    <input type="text" class="form-control" name="Category">
+  </div>
    <div class="form-group">
     <label for="File">File:</label>
     <input type="file" class="form-control" name="File">

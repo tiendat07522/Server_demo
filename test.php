@@ -8,12 +8,9 @@
   $namefile=$_FILES['File']['name'];
   $picture_name=$_FILES['picture']['name'];
   $singer=$_POST['Singer'];
+  $category=$_POST['Category'];
   $size = $_FILES['File']['size'];
   $type = $_FILES['File']['type'];
-  
-	// echo 'name'.$name;
-	// echo 'size'.$size;
-	// echo 'type'.$type;
 	if(isset($name) && !empty($name)){
 
 	// lay duoi file
@@ -29,7 +26,7 @@
 			$value_mp3="demophp/".$location.$namepath.".mp3";
 			move_uploaded_file($_FILES['picture']['tmp_name'],$location_picture.$picture_name);
 			// dua thong tin file vao csdl
-			$query = "INSERT INTO `mp3` (name, singer, category, views,path,picture) VALUES ('$name', '$singer', NULL,NULL,'$value_mp3','$value_picture')";
+			$query = "INSERT INTO `mp3` (name, singer, category, views,path,picture) VALUES ('$name', '$singer', '$category',NULL,'$value_mp3','$value_picture')";
             $result = mysqli_query($con,$query);
             echo $smsg;
 		}else{
