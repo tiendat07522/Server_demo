@@ -1,7 +1,8 @@
 <?php require_once 'config.php';?>
 <?php 
+$users_id=$_POST['users_id'];
 $playlist_arr= array();
-$query="SELECT * FROM `playlist`";
+$query="SELECT * FROM `playlist` where users_id=$users_id";
 $result = mysqli_query($con,$query);
 while ($row = mysqli_fetch_assoc($result)) {
 $playlist_id=$row['playlist_id'];
