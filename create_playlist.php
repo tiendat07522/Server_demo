@@ -9,7 +9,7 @@ $data=array();
          $data[]=array('status'=>200);
      	print json_encode($data);
    }
-    }else{
+    else{
         $data[]=array('status'=>404);
         	print json_encode($data);
     }
