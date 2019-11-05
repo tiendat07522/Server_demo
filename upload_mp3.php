@@ -24,11 +24,10 @@
                 <li><a href="home.php"><i class="fas fa-align-justify"></i> DashBoard</a></li>
                 <li><a href="upload_mp3.php"><i class="fas fa-folder-plus"></i> Upload MP3</a></li>
                 <li><a href="upload_mp4.php"><i class="fas fa-bible"></i> Upload MP4</a></li>
-                <li><a href="#"><i class="fas fa-align-justify"></i>  ....</a></li>
-                <li><a href="#"><i class="fas fa-align-justify"></i>  ....</a></li>
-                <li><a href="#"><i class="fas fa-align-justify"></i>  ....</a></li>
-                <li><a href="#"><i class="fas fa-align-justify"></i>  ....</a></li>
-                <li><a href="#"><i class="fas fa-align-justify"></i>  ....</a></li>
+                <li><a href="add_category.php"><i class="fas fa-book-open"></i>  Add Category</a></li>
+                <li><a href="add_singer.php"><i class="fas fa-microchip"></i>  Add Singer</a></li>
+                <li><a href="singer_manage.php"><i class="fas fa-server"></i>  Singer Manage</a></li>
+                <li><a href="category_manage.php"><i class="fas fa-memory"></i>  Category Manage</a></li>
             </ul>
         </div>
 <div class="right-nav">
@@ -43,17 +42,32 @@ Upload MP3
     <input type="text" class="form-control" name="Namepath">
   </div>
   <div class="form-group">
-    <label for="Singer">Singer:</label>
-    <input type="text" class="form-control" name="Singer">
+  <label for="Singer">Singer:</label>
+   <select class="form-control" name="Singer">
+   <?php require_once 'config.php';?>
+  <?php  $query="SELECT * FROM `singer`";
+        $result = mysqli_query($con,$query);
+  while ($row = mysqli_fetch_assoc($result)) :
+  ?>
+     <option value="<?php echo $row['singer']?>"><?php echo $row['singer']?></option>
+  <?php endwhile?>
+  </select>
   </div>
-  <div class="form-group">
-    <label for="Singer">Category:</label>
-    <input type="text" class="form-control" name="Category">
+ <div class="form-group">
+  <label for="Singer">Category:</label>
+   <select class="form-control" name="Category">
+   <?php require_once 'config.php';?>
+  <?php  $query="SELECT * FROM `category`";
+        $result = mysqli_query($con,$query);
+      while ($row = mysqli_fetch_assoc($result)) :
+  ?>
+     <option value="<?php echo $row['category']?>"><?php echo $row['category']?></option>
+  <?php endwhile?>
+  </select>
   </div>
    <div class="form-group">
     <label for="File">File:</label>
     <input type="file" class="form-control" name="File">
-  
   </div>
   <div class="form-group">
     <label for="File">Ảnh hiển thị:</label>

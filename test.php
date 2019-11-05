@@ -15,7 +15,6 @@
 
 	// lay duoi file
 	$extension = substr($namefile, strpos($namefile, '.') + 1);
-	echo $extension;
 	// kiem tra xem co dung la file hinh anh hay khong
 	if(($extension == "mp3") && $type == "audio/mp3" && $extension == $size<=$max_size){
 		$location = "uploads/mp3/";
@@ -27,7 +26,7 @@
 			move_uploaded_file($_FILES['picture']['tmp_name'],$location_picture.$picture_name);
 			// dua thong tin file vao csdl
 			$query = "INSERT INTO `mp3` (name, singer, category, views,path,picture) VALUES ('$name', '$singer', '$category',NULL,'$value_mp3','$value_picture')";
-            $result = mysqli_query($con,$query);
+			$result = mysqli_query($con,$query);
             echo $smsg;
 		}else{
 			$fmsg = "Upload Thất bại";
