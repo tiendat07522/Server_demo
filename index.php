@@ -18,16 +18,14 @@
 <body>
  <div class="container">
   <div class="login-text">
-  <form action="login_client.php" method="POST">
+  <form action="login.php" method="POST">
   <div class="form-group">
     <label for="email">Email address:</label>
-    email
-    <input type="text" class="form-control" name="username" required>
+    <input type="text" class="form-control" name="email" required>
   </div>
   <div class="form-group">
     <label for="pwd">Password:</label>
-    pass
-    <input type="password" class="form-control" name="password" required>
+    <input type="password" class="form-control" name="pass" required>
   </div>
   <div class="checkbox">
     <label><input type="checkbox"> Remember me</label>
