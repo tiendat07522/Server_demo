@@ -6,10 +6,10 @@
     $func="SELECT * FROM `mp3`";
     $rest=mysqli_query($con,$func);
     $row = mysqli_fetch_assoc($rest);
-    $view=$row['view'];
+    $view=$row['views'];
     $view_count = $view+1;
         $query="UPDATE mp3
-                SET view=$view_count
+                SET views=$view_count
                 WHERE mp3_id=$mp3_id";
         if($result = mysqli_query($con,$query)){
              $data[]=array('status'=>200);
