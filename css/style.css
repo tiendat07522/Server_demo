@@ -207,6 +207,7 @@ a.link-dashboard:hover {
     top: 30%;
     left: 35%;
     padding: 30px;
+    border-radius: 8px;
 }
 
 .dialog, .dialogCate {
