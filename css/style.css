@@ -83,20 +83,24 @@ html, body {
 }
 
 a.link-dashboard {
-    color: white;
+    /* color: white; */
     font-size: 20px;
 }
 
 a.link-dashboard:hover {
     text-decoration: none;
-    color: #dfe4e8;
+    /* color: #dfe4e8; */
+}
+
+.container-fluid {
+    background-color: #f1eff1;
 }
 
 .left-nav {
     float: left;
     width: 15%;
     height: 100vh;
-    background: #d950d3;
+    background: #14141f;
     border-radius: 8px;
 }
 
@@ -154,6 +158,7 @@ a.link-dashboard:hover {
 .one-song p {
     color: white;
     font-size: 20px;
+    cursor: pointer;
 }
 
 .box-mp4-view {
@@ -163,7 +168,7 @@ a.link-dashboard:hover {
 }
 
 .title-list p {
-    color: white;
+    /* color: white; */
     font-size: 20px
 }
 
