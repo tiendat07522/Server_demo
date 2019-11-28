@@ -37,6 +37,10 @@
     <label for="Name">Singer: </label>
     <input type="text" class="form-control" name="singer">
   </div>
+  <div class="form-group">
+    <label for="File">Ảnh Ca sĩ:</label>
+    <input type="file" class="form-control" name="avatar">
+  </div>
   <button type="submit" class="btn btn-default">Add</button>
 </form>
 </div>

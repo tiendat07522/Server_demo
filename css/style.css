@@ -1,3 +1,31 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.box-singer {
+    width: 100%;
+}
+
+.box-singer label {
+    float: left;
+    width: 100%;
+}
+
+.btnAdd {
+    margin: 0px !important;
+}
+
+.box-singer-left {
+    width: 90%;
+    float: left;
+    margin-right: 10px;
+}
+
+.box-singer-right {
+    float: left;
+}
+
 .left-block {
     margin-top: 2px;
     display: block;
@@ -29,8 +57,10 @@
 
 .container {
     background: #d8d8d899;
-    height: 100vh;
-    overflow: hidden;
+    padding-bottom: 50px;
+    margin-top: 10%;
+    /* height: 100vh; */
+    /* overflow: hidden; */
 }
 
 .right-block {
@@ -152,4 +182,47 @@ a.link-dashboard:hover {
 
 .clear-both {
     clear: both;
+}
+
+.buttonClose {
+    padding: 10px;
+    font-size: 20px;
+    float: right;
+}
+
+.btnAdd {
+    margin: 10px 0px;
+}
+
+.box-dialog, .box-dialogCate {
+    z-index: 2;
+    width: 500px;
+    background-color: #fff;
+    position: fixed;
+    top: 30%;
+    left: 35%;
+    padding: 30px;
+}
+
+.dialog, .dialogCate {
+    display: none;
+    position: relative;
+}
+
+.dialog.show, .dialogCate.show {
+    display: inline-block;
+    width: auto;
+}
+
+.box-cover.show {
+    background-color: cyan;
+}
+
+.cover.show {
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background: #2d3436;
+    opacity: 0.2;
+    position: fixed;
 }

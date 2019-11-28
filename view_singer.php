@@ -5,7 +5,8 @@ $result = mysqli_query($con,$query);
 $post_view= array();
 while ($row = mysqli_fetch_assoc($result)) {
 $singer=$row['singer'];
-$post_view[]= array('singer'=>$singer);
+$avatar=$row['avatar'];
+$post_view[]= array('singer'=>$singer,'avatar'=>$avatar);
 };
 print json_encode($post_view);
 ?>
