@@ -1,7 +1,7 @@
 <?php require_once 'config.php';?>
 <?php 
 $singer=$_POST['singer'];
-$query="SELECT * FROM `mp3`  where singer=$singer";
+$query="SELECT * FROM `mp3` where singer='$singer'";
 $result = mysqli_query($con,$query);
 $post_view= array();
 while ($row = mysqli_fetch_assoc($result)) {
