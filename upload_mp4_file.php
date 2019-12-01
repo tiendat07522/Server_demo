@@ -15,7 +15,6 @@
 
 	// lay duoi file
 	$extension = substr($namefile, strpos($namefile, '.') + 1);
-	echo $extension;
 	// kiem tra xem co dung la file hinh anh hay khong
 	if(($extension == "mp4") && $type == "video/mp4" && $extension == $size<=$max_size){
 		$location = "uploads/mp4/";
@@ -28,17 +27,17 @@
 			$result = mysqli_query($con,$query);
 			$smsg = "Upload thành công !";
 			move_uploaded_file($_FILES['picture']['tmp_name'],$location_picture.$picture_name);
-            echo $smsg;
+          
 		}else{
 			$fmsg = "Upload Thất bại";
-            echo $fmsg;
+            
 		}
 	}else{
         $fmsg = "Chỉ hỗ trợ file MP4 và dung lượng không quá 100MB";
-         echo $fmsg;
+        
 	}
 	}else{
         $fmsg = "Chọn file upload";
-         echo $fmsg;
+      
 	}	
 ?>

@@ -4,9 +4,9 @@ $category=$_POST['category'];
         $query = "INSERT INTO `category` (category) VALUES ('$category')";
         $result = mysqli_query($con,$query);
         if ($result) {
-          echo 'Success !';
+        $smsg = "Thêm Category Thành Công !";
         } 
         else{
-            echo 'Fail !';
+           $fmsg="Nhập Tên Category !";
         }
 ?>

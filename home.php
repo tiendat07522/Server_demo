@@ -33,6 +33,8 @@
                 <li><a href="add_singer.php"><i class="fas fa-microchip"></i>  Add Singer</a></li>
                 <li><a href="singer_manage.php"><i class="fas fa-server"></i>  Singer Manage</a></li>
                 <li><a href="category_manage.php"><i class="fas fa-memory"></i>  Category Manage</a></li>
+                <li><a href="custom_playlist.php"><i class="fas fa-memory"></i>  Custom Playlist</a></li>
+                <li><a href="custom_playlist_mp3.php"><i class="fas fa-memory"></i>  Add Mp3 To Playlist</a></li>
             </ul>
         </div>
       

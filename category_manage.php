@@ -35,7 +35,6 @@
                 <li><a href="category_manage.php"><i class="fas fa-memory"></i>  Category Manage</a></li>
             </ul>
         </div>
-      
         <!-- end left nav -->
         <div class="right-nav">
             <div class="box-mp3-view">

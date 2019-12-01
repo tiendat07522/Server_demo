@@ -1,14 +1,12 @@
 <?php require_once 'config.php';?>
 <?php
+error_reporting(E_ERROR | E_PARSE);
 	// gioi han file upload khong qua 100kb
 	$max_size = 1000000;	
 	// lay thong tin file upload
 	$name = $_FILES['file']['name'];
 	$size = $_FILES['file']['size'];
 	$type = $_FILES['file']['type'];
-	// echo 'name'.$name;
-	// echo 'size'.$size;
-	// echo 'type'.$type;
 	if(isset($name) && !empty($name)){
 
 	// lay duoi file
@@ -22,7 +20,7 @@
 			// dua thong tin file vao csdl
 			$query = "INSERT INTO `upload` (name, size, type, location) VALUES ('$name', '$size', '$type', '$location$name')";
             $result = mysqli_query($con,$query);
-            echo $smsg;
+           
 		}else{
 			$fmsg = "Upload Thất bại";
 	

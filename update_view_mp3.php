@@ -1,6 +1,5 @@
  <?php require_once 'config.php';?>
  <?php 
-
         $mp3_id = $_POST['mp3_id'];
     // get view from mp3
     $func="SELECT * FROM `mp3`";

@@ -1,4 +1,6 @@
 <?php require_once 'config.php';?>
+<?php require_once 'test.php';
+error_reporting(E_ALL & ~E_WARNING & ~E_NOTICE);?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -71,7 +73,7 @@
         </div>
 <div class="right-nav">
 Upload MP3
- <form action="test.php" method="POST" enctype="multipart/form-data">
+ <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
   <div class="form-group">
     <label for="Name">Tên hiển thị: </label>
     <input type="text" class="form-control" name="Name">
@@ -128,7 +130,10 @@ Upload MP3
   </div>
   <button type="submit" class="btn btn-default">Upload</button>
 </form>
+      <?php if(isset($smsg)){ ?><div class="alert alert-success" role="alert"> <?php echo $smsg; ?> </div><?php } ?>
+			<?php if(isset($fmsg)){ ?><div class="alert alert-danger" role="alert"> <?php echo $fmsg; ?> </div><?php } ?>
 </div>
+
 </div>
 </body>
 <script src="js/main.js"></script>

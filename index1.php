@@ -1,4 +1,8 @@
 <?php require_once 'config.php';?>
+<?php require_once 'upload.php';
+error_reporting(E_ALL & ~E_WARNING & ~E_NOTICE);
+?>
+
 <!DOCTYPE html>
 <html>
     <head><title>Demo</title>
@@ -15,7 +19,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-<form class="form-signin"  action="upload.php" method="POST" enctype="multipart/form-data">
+<form class="form-signin"  action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
         	<h2 class="form-signin-heading">Upload File</h2>
 	  		<div class="form-group">
 	   		<label for="InputFile">File input</label>
@@ -24,10 +28,10 @@
 	    	<!-- Thong bao loi  -->
 	  </div>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Upload</button>
+		
       </form>
-	
+
 <?php if(isset($smsg)){ ?><div class="alert alert-success" role="alert"> <?php echo $smsg; ?> </div><?php } ?>
 			<?php if(isset($fmsg)){ ?><div class="alert alert-danger" role="alert"> <?php echo $fmsg; ?> </div><?php } ?>
-
 </body>
 </html>

@@ -1,4 +1,5 @@
 <?php require_once 'config.php';?>
+<?php require_once 'add_category_file.php'?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,13 +33,15 @@
         </div>
 <div class="right-nav">
     Add Category
- <form action="add_category_file.php" method="POST" enctype="multipart/form-data">
+ <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
   <div class="form-group">
     <label for="Name">Tên Category: </label>
     <input type="text" class="form-control" name="category">
   </div>
   <button type="submit" class="btn btn-default">Add</button>
 </form>
+   <?php if(isset($smsg)){ ?><div class="alert alert-success" role="alert"> <?php echo $smsg; ?> </div><?php } ?>
+			<?php if(isset($fmsg)){ ?><div class="alert alert-danger" role="alert"> <?php echo $fmsg; ?> </div><?php } ?>
 </div>
 </div>
 </body>

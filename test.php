@@ -27,17 +27,17 @@
 			// dua thong tin file vao csdl
 			$query = "INSERT INTO `mp3` (name, singer, category, views,path,picture) VALUES ('$name', '$singer', '$category',NULL,'$value_mp3','$value_picture')";
 			$result = mysqli_query($con,$query);
-            echo $smsg;
+            
 		}else{
 			$fmsg = "Upload Thất bại";
-            echo $fmsg;
+        
 		}
 	}else{
         $fmsg = "Chỉ hỗ trợ file MP3 và dung lượng không quá 100MB";
-         echo $fmsg;
+        
 	}
 	}else{
         $fmsg = "Chọn file upload";
-         echo $fmsg;
+         
 	}	
 ?>

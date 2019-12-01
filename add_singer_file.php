@@ -15,13 +15,12 @@ if(isset($avatar) && !empty($avatar)){
     $location = "uploads/";
     $filePath="demophp/".$location.$avatar;
 		if(move_uploaded_file($_FILES['avatar']['tmp_name'],$location.$avatar)){
-            $smsg = "Upload thành công !";
+            $smsg = "Thêm Ca Sĩ thành công !";
 			// dua thong tin file vao csdl
 			$query = "INSERT INTO `singer` (singer, avatar) VALUES ('$singer', '$filePath')";
-            $result = mysqli_query($con,$query);
-            echo $smsg;
+            $result = mysqli_query($con,$query);        
 		}else{
-			$fmsg = "Upload Thất bại";
+			$fmsg = "Add Thất bại";
 	
 		}
 	}else{
@@ -29,18 +28,6 @@ if(isset($avatar) && !empty($avatar)){
 	}
 
 	}else{
-        $fmsg = "Chọn file upload";
+        $fmsg = "Chọn file upload Và tên Ca sĩ";
 	}
-
-
-
-
-        // $query = "INSERT INTO `singer` (singer) VALUES ('$singer')";
-        // $result = mysqli_query($con,$query);
-        // if ($result) {
-        //   echo 'Success !';
-        // } 
-        // else{
-        //     echo 'Fail !';
-        // }
 ?>
