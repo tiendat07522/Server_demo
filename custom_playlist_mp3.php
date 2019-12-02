@@ -1,4 +1,5 @@
 <?php require_once 'config.php';?>
+<?php require_once 'custom_details.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,7 +41,7 @@
         <!-- end left nav -->
             <div class="right-nav">
                  Add MP3 To Playlist
-                <form action="file.php" method="POST" enctype="multipart/form-data">
+                <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="Name">Playlist </label>
                    <select class="form-control" name="playlist_id">
@@ -48,7 +49,7 @@
                     $result = mysqli_query($con,$query);
                   while ($row = mysqli_fetch_assoc($result)) :
               ?>
-                <option value="<?php echo $row['custom_playlist_id']?>"><?php echo $row['custom_playlist_id']?></option>
+                <option value="<?php echo $row['custom_playlist_id']?>"><?php echo $row['custom_playlist_name']?></option>
               <?php endwhile?>
               </select>
                 </div>
@@ -59,7 +60,7 @@
                     $result = mysqli_query($con,$query);
                   while ($row = mysqli_fetch_assoc($result)) :
               ?>
-                <option value="<?php echo $row['mp3_id']?>"><?php echo $row['mp3_id']?></option>
+                <option value="<?php echo $row['mp3_id']?>"><?php echo $row['name']?></option>
               <?php endwhile?>
               </select>
                 </div>
