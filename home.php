@@ -17,24 +17,21 @@
 </head>
 <body>
     <div class="container-fluid big-box">
-        <div class="top-nav">
-            <a href="#" class="link-dashboard">DashBoard</a>
-        </div>
     <!-- end top-nav -->
         <div class="left-nav">
             <div class="logo-team">
                 <a href="#">Team 4</a>
             </div>
             <ul class="nav-pre">
-                <li><a href="home.php"><i class="fas fa-align-justify"></i> DashBoard</a></li>
-                <li><a href="upload_mp3.php"><i class="fas fa-folder-plus"></i> Upload MP3</a></li>
-                <li><a href="upload_mp4.php"><i class="fas fa-bible"></i> Upload MP4</a></li>
-                <li><a href="add_category.php"><i class="fas fa-book-open"></i>  Add Category</a></li>
-                <li><a href="add_singer.php"><i class="fas fa-microchip"></i>  Add Singer</a></li>
-                <li><a href="singer_manage.php"><i class="fas fa-server"></i>  Singer Manage</a></li>
-                <li><a href="category_manage.php"><i class="fas fa-memory"></i>  Category Manage</a></li>
-                <li><a href="custom_playlist.php"><i class="fas fa-memory"></i>  Custom Playlist</a></li>
-                <li><a href="custom_playlist_mp3.php"><i class="fas fa-memory"></i>  Add Mp3 To Playlist</a></li>
+                <li><a href="home.php"> DashBoard</a></li>
+                <li><a href="upload_mp3.php"> Upload MP3</a></li>
+                <li><a href="upload_mp4.php"> Upload MP4</a></li>
+                <li><a href="add_category.php">  Add Category</a></li>
+                <li><a href="add_singer.php"> Add Singer</a></li>
+                <li><a href="singer_manage.php"> Singer Manage</a></li>
+                <li><a href="category_manage.php">  Category Manage</a></li>
+                <li><a href="custom_playlist.php">  Custom Playlist</a></li>
+                <li><a href="custom_playlist_mp3.php"> Add Mp3 To Playlist</a></li>
             </ul>
         </div>
       
@@ -50,9 +47,16 @@
         while ($row = mysqli_fetch_assoc($result)) :
         ?>
                 <div class="one-song">
+                        <div class="image-song">
+                <?php 
+                     $link_img=substr($row['picture'],7);
+                ?>
+                <img src="<?php echo $link_img ?>" alt="">
+                </div>
+
                     <div class="text-song">
                         <p><?php echo $row['name']?></p>
-                        <p><?php echo $row['singer']?></p>
+                        <p class="p-singer"><?php echo $row['singer']?></p>
                     </div>
                     <div class="icon-song">
                         <a href="remove.php?del=<?php echo $row['mp3_id']?>"> <i class="fas fa-trash-alt"></i></a>
@@ -74,6 +78,12 @@
         while ($row = mysqli_fetch_assoc($result)) :
         ?>
                 <div class="one-song">
+                      <div class="image-song">
+                <?php 
+                     $link_img=substr($row['picture'],7);
+                ?>
+                <img src="<?php echo $link_img ?>" alt="">
+                </div>
                     <div class="text-song">
                         <p><?php echo $row['name']?></p>
                         <p><?php echo $row['singer']?></p>
@@ -92,5 +102,11 @@
             <!-- end right nav -->
         </div>
     <!-- end big-box -->
+    <!-- footer -->
+            <div class="footer">
+                <hr>
+                Coppy Right 2019
+            </div>
+    <!-- foooter -->
 </body>
 </html>

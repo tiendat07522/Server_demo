@@ -56,19 +56,21 @@ error_reporting(E_ALL & ~E_WARNING & ~E_NOTICE);?>
     <!-- end dialog category -->
  
 
-<div  class="container-fluid ">
+<div  class="container-fluid big-box">
    <div class="left-nav">
             <div class="logo-team">
                 <a href="#">Team 4</a>
             </div>
             <ul class="nav-pre">
-                <li><a href="home.php"><i class="fas fa-align-justify"></i> DashBoard</a></li>
-                <li><a href="upload_mp3.php"><i class="fas fa-folder-plus"></i> Upload MP3</a></li>
-                <li><a href="upload_mp4.php"><i class="fas fa-bible"></i> Upload MP4</a></li>
-                <li><a href="add_category.php"><i class="fas fa-book-open"></i>  Add Category</a></li>
-                <li><a href="add_singer.php"><i class="fas fa-microchip"></i>  Add Singer</a></li>
-                <li><a href="singer_manage.php"><i class="fas fa-server"></i>  Singer Manage</a></li>
-                <li><a href="category_manage.php"><i class="fas fa-memory"></i>  Category Manage</a></li>
+                <li><a href="home.php"> DashBoard</a></li>
+                <li><a href="upload_mp3.php"> Upload MP3</a></li>
+                <li><a href="upload_mp4.php"> Upload MP4</a></li>
+                <li><a href="add_category.php">  Add Category</a></li>
+                <li><a href="add_singer.php"> Add Singer</a></li>
+                <li><a href="singer_manage.php"> Singer Manage</a></li>
+                <li><a href="category_manage.php">  Category Manage</a></li>
+                <li><a href="custom_playlist.php">  Custom Playlist</a></li>
+                <li><a href="custom_playlist_mp3.php"> Add Mp3 To Playlist</a></li>
             </ul>
         </div>
 <div class="right-nav">
@@ -128,7 +130,8 @@ Upload MP3
     <input type="file" class="form-control" name="picture">
   
   </div>
-  <button type="submit" class="btn btn-default">Upload</button>
+  <button type="submit" class="btn btn-default btn-add">Upload</button>
+  <div class="clear-both"></div>
 </form>
       <?php if(isset($smsg)){ ?><div class="alert alert-success" role="alert"> <?php echo $smsg; ?> </div><?php } ?>
 			<?php if(isset($fmsg)){ ?><div class="alert alert-danger" role="alert"> <?php echo $fmsg; ?> </div><?php } ?>
