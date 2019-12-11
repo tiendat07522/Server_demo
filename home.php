@@ -60,7 +60,7 @@
                     </div>
                     <div class="icon-song">
                         <a href="remove.php?del=<?php echo $row['mp3_id']?>"> <i class="fas fa-trash-alt"></i></a>
-                        <a href="edit_mp3_page.php?del=<?php echo $row['mp3_id']?>"><i class="fas fa-edit"></i></a>
+                        <a href="edit_mp3_page.php?edit=<?php echo $row['mp3_id']?>"><i class="fas fa-edit"></i></a>
                     </div>
                     <div class="clear-both"></div>
                 </div>
@@ -91,7 +91,7 @@
                     </div>
                     <div class="icon-song">
                         <a href="remove_mp4.php?del=<?php echo $row['mp4_id']?>"> <i class="fas fa-trash-alt"></i></a>
-                        <a href="#"><i class="fas fa-edit"></i></a>
+                        <a href="edit_mp4_page.php?edit=<?php echo $row['mp4_id']?>"><i class="fas fa-edit"></i></a>
                     </div>
                     <div class="clear-both"></div>
                 </div>
