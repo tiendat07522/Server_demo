@@ -49,9 +49,11 @@
                 <div class="one-song">
                         <div class="image-song">
                 <?php 
-                    //  $link_img=substr($row['picture'],7);
+                     $link_img=substr($row['picture'],7);
+                    
                 ?>
-                <img src="<?php echo $row['picture'] ?>" alt="">
+                <img src="<?php echo $link_img ?>" alt="">
+                
                 </div>
 
                     <div class="text-song">
@@ -80,9 +82,9 @@
                 <div class="one-song">
                       <div class="image-song">
                 <?php 
-                    //  $link_img=substr($row['picture'],7);
+                     $link_img=substr($row['picture'],7);
                 ?>
-                <img src="<?php echo $row['picture'] ?>" alt="">
+                <img src="<?php echo $link_img ?>" alt="">
                 </div>
                     <div class="text-song">
                         <p><?php echo $row['name']?></p>
