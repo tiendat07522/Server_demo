@@ -1,5 +1,7 @@
 <?php require_once 'config.php';?>
 <?php require_once 'test.php';
+require_once 'add_category_file.php';
+require_once 'add_singer_file.php';
 error_reporting(E_ALL & ~E_WARNING & ~E_NOTICE);?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +26,7 @@ error_reporting(E_ALL & ~E_WARNING & ~E_NOTICE);?>
               <div class="box-dialog">
                 Add Singer
                   <i onclick="closeDialog()" class="fas fa-window-close buttonClose"></i>
-                <form action="add_singer_file.php" method="POST" enctype="multipart/form-data">
+                <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
                   <div class="form-group">
                     <label for="Name">Singer: </label>
                     <input type="text" class="form-control" name="singer">
@@ -44,7 +46,7 @@ error_reporting(E_ALL & ~E_WARNING & ~E_NOTICE);?>
         <div class="box-dialogCate">
                 Add Category
                  <i onclick="closeDialogCate()" class="fas fa-window-close buttonClose"></i>
-            <form action="add_category_file.php" method="POST" enctype="multipart/form-data">
+            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
               <div class="form-group">
                 <label for="Name">Tên Category: </label>
                 <input type="text" class="form-control" name="category">
