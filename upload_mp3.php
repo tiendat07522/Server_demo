@@ -33,7 +33,7 @@ error_reporting(E_ALL & ~E_WARNING & ~E_NOTICE);?>
                   </div>
                   <div class="form-group">
                     <label for="File">Ảnh Ca sĩ:</label>
-                    <input type="file" class="form-control" name="avatar">
+                    <input type="file" class="form-control" name="avatar" required>
                   </div>
                   <button type="submit" class="btn btn-default">Add</button>
                 </form>
@@ -49,7 +49,7 @@ error_reporting(E_ALL & ~E_WARNING & ~E_NOTICE);?>
             <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
               <div class="form-group">
                 <label for="Name">Tên Category: </label>
-                <input type="text" class="form-control" name="category">
+                <input type="text" class="form-control" name="category" required>
               </div>
               <button type="submit" class="btn btn-default">Add</button>
             </form>
@@ -80,11 +80,11 @@ Upload MP3
  <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
   <div class="form-group">
     <label for="Name">Tên hiển thị: </label>
-    <input type="text" class="form-control" name="Name">
+    <input type="text" class="form-control" name="Name" required>
   </div>
    <div class="form-group">
     <label for="Name">Tên Trong Đường dẫn: </label>
-    <input type="text" class="form-control" name="Namepath">
+    <input type="text" class="form-control" name="Namepath" required>
   </div>
     <div class="form-group box-singer">
       <label for="Singer">Singer:</label>

@@ -39,7 +39,7 @@
  <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
   <div class="form-group">
     <label for="Name">Tên Category: </label>
-    <input type="text" class="form-control" name="category">
+    <input type="text" class="form-control" name="category" required>
   </div>
   <button type="submit" class="btn btn-default btn-add">Add</button>
   <div class="clear-both"></div>

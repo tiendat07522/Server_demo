@@ -39,7 +39,7 @@
  <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
   <div class="form-group">
     <label for="Name">Singer: </label>
-    <input type="text" class="form-control" name="singer">
+    <input type="text" class="form-control" name="singer" required>
   </div>
   <div class="form-group">
     <label for="File">Ảnh Ca sĩ:</label>

@@ -31,7 +31,7 @@ require_once 'add_singer_file.php';
                   </div>
                   <div class="form-group">
                     <label for="File">Ảnh Ca sĩ:</label>
-                    <input type="file" class="form-control" name="avatar">
+                    <input type="file" class="form-control" name="avatar" required>
                   </div>
                   <button type="submit" class="btn btn-default">Add</button>
                 </form>
@@ -60,11 +60,11 @@ require_once 'add_singer_file.php';
  <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
   <div class="form-group">
     <label for="Name">Tên Hiển thị: </label>
-    <input type="text" class="form-control" name="Name">
+    <input type="text" class="form-control" name="Name" required>
   </div>
    <div class="form-group">
     <label for="Name">Tên Đường dẫn: </label>
-    <input type="text" class="form-control" name="Namepath">
+    <input type="text" class="form-control" name="Namepath" required>
   </div>
   <div class="form-group box-singer">
       <label for="Singer">Singer:</label>
@@ -86,7 +86,7 @@ require_once 'add_singer_file.php';
     </div>
    <div class="form-group">
     <label for="File">File:</label>
-    <input type="file" class="form-control" name="File">
+    <input type="file" class="form-control" name="File" >
   </div>
   <div class="form-group">
     <label for="File">Ảnh hiển thị:</label>

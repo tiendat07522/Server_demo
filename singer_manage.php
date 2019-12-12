@@ -50,8 +50,8 @@
                         <p><?php echo $row['singer']?></p>
                     </div>
                     <div class="icon-song">
-                        <a href="#"> <i class="fas fa-trash-alt"></i></a>
-                        <a href="#"><i class="fas fa-edit"></i></a>
+                        <a href="remove_singer_file.php?del=<?php echo $row['singer']?>"> <i class="fas fa-trash-alt"></i></a>
+                        <a href="edit_singer.php?edit=<?php echo $row['singer']?>"><i class="fas fa-edit"></i></a>
                     </div>
                     <div class="clear-both"></div>
                 </div>

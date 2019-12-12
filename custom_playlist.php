@@ -35,18 +35,17 @@
                 <li><a href="custom_playlist_mp3.php"> Add Mp3 To Playlist</a></li>
             </ul>
         </div>
-      
         <!-- end left nav -->
             <div class="right-nav">
                  Add Custom Playlist
                 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="Name">Tên Playlist </label>
-                    <input type="text" class="form-control" name="custom_playlist_name">
+                    <input type="text" class="form-control" name="custom_playlist_name" required>
                 </div>
                    <div class="form-group">
                     <label for="Name">Category </label>
-                    <input type="text" class="form-control" name="custom_playlist_category">
+                    <input type="text" class="form-control" name="custom_playlist_category" required>
                 </div>
                 <div class="form-group">
                     <label for="File">Ảnh Hiển thị:</label>
